@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { initializeAuth, getReactNativePersistence } from 'firebase/auth'
 import AsyncStorage, {} from '@react-native-async-storage/async-storage'
+import Constants from 'expo-constants'
 import { getFirestore } from 'firebase/firestore'
 import { getStorage } from 'firebase/storage'
 
@@ -9,12 +10,12 @@ import { getStorage } from 'firebase/storage'
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDBWOMNJEUkGwIksedw-_7suqcskZ_ditM",
+  apiKey: Constants.expoConfig.extra.APIKEY,
   authDomain: "gossii-d91c6.firebaseapp.com",
-  projectId: "gossii-d91c6",
+  projectId: Constants.expoConfig.extra.PROJECTID,
   storageBucket: "gossii-d91c6.firebasestorage.app",
   messagingSenderId: "1081221594985",
-  appId: "1:1081221594985:web:be7da653ea99db249f87f8",
+  appId: Constants.expoConfig.extra.APPID,
   measurementId: "G-4N12BXLXZ1"
 };
 

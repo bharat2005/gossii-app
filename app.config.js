@@ -1,4 +1,6 @@
-{
+import 'dotenv/config'
+
+export default {
   "expo": {
     "name": "gossii",
     "slug": "gossii",
@@ -39,6 +41,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra":{
+      APIKEY:process.env.apiKey,
+      PROJECTID:process.env.projectId,
+      APPID:process.env.appId
     }
   }
 }
