@@ -23,7 +23,7 @@ It’s the **second app** in my journey to build **100 Emotionally Designed MVPs
 
 ## 🖼️ Banner Preview
 
-![Gossi Banner](./media/Gossi%20Banner.png)
+![Gossi Banner](./media/Gossii%20Banner.png)
 
 ---
 
