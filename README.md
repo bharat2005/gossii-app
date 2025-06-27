@@ -1,50 +1,79 @@
-# Welcome to your Expo app 👋
+# 💬 Gossi — Cute Gossip-Based Social MVP
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Gossi** is a soft-styled, girl-centric social app where users can post, react, comment, and gossip freely.  
+It’s the **second app** in my journey to build **100 Emotionally Designed MVPs** — real products that feel personal and expressive.
 
-## Get started
+🎬 [Watch Demo on YouTube](https://youtu.be/nRhW5lHNpD4?feature=shared)  
+📱 [Watch Insta Reel](https://www.instagram.com/reel/DKw2ay-JO0K/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 💡 Features
 
-2. Start the app
+- 📸 Post videos/images with preview before uploading
+- ♻️ Infinite scroll feed with `useInfiniteQuery` (TanStack)
+- ❤️ React to posts with emojis (Optimistic UI)
+- 💾 Save/Favorite posts (stored in user profile)
+- 💬 Comment system for every post
+- 🚩 Flag/Report abusive content
+- 🚫 Block users to instantly filter their posts from feed
+- 🧑‍💼 View other users' profiles and media-specific posts
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🖼️ Banner Preview
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+![Gossi Banner](./media/Gossi%20Banner.png)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🧠 Tech Stack
 
-When you're ready, run:
+- **React Native (Expo)**
+- **Firebase** (Auth, Firestore, Storage)
+- **TanStack Query** – Infinite scroll & optimistic mutations
+- **Expo Image Picker**, **Expo Video**
+- **Reanimated**, **React Native Paper**, **Tab View**
 
-```bash
-npm run reset-project
+---
+
+## 🛠️ Setup Instructions
+
+1. Clone the repo
+```
+git clone https://github.com/bharat2005/gossii-app.git
+cd gossii-app
+```
+2. Install dependencies
+```
+npm install
+```
+3. Rename the file example.env to .env
+4. Update .env with your own configuration, e.g.:
+```
+# Rename this file to ".env" before use
+# Replace XXXX's with your own Firebase config keys 
+API_KEY=XXXX
+AUTH_DOMAIN=XXXX
+PROJECT_ID=XXXX
+STORAGE_BUCKET=XXXX
+MESSAGING_SENDER_ID=XXXX
+APP_ID=XXXX
+MEASURMENT_ID=XXXX
+```
+ 5. Run the app 
+```
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+### ⚠️ Note on Firestore Data
 
-To learn more about developing your project with Expo, look at the following resources:
+This app uses Firestore to fetch catalog and product feed data.
+If you're running the app locally with your own Firebase project, you'll need to manually seed your Firestore with product/category documents — otherwise, the feed may appear empty.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📄 License  
+This project is licensed under the [MIT License](./LICENSE).
