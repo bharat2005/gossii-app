@@ -1,6 +1,6 @@
 import { View, Text, Pressable } from 'react-native'
 import { Button, HelperText, TextInput } from 'react-native-paper'
-import React from 'react'
+import React, { useState } from 'react'
 import LogoInverted from '../../../../assets/svgs/LogoInverted'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Entypo from '@expo/vector-icons/Entypo'
@@ -8,6 +8,7 @@ import ColorButton from '../../atoms/ColorButton'
 import Colors from '../../../constants/Colors'
 
 const RegisterPassword = ({handleBlur, handleChange, handleSubmit, touched, errors, values, setStep, isSubmitting}) => {
+  const [hidden, setHidden] = useState(false)
 
   return (
     <SafeAreaView style={{flex:1}} edges={['bottom']}>
@@ -47,6 +48,9 @@ const RegisterPassword = ({handleBlur, handleChange, handleSubmit, touched, erro
           </View>
       
      <TextInput 
+     right={<TextInput.Icon color={'gray'} icon={hidden ? 'eye-off' : 'eye'} onPress={()=> setHidden(prev => !prev)} />}
+     secureTextEntry={hidden}
+
       mode='outlined'
          placeholder='create password'
          theme={{colors:{
